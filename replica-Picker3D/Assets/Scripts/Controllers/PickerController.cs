@@ -21,12 +21,12 @@ public class PickerController : MonoBehaviour
         {
             first = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, 0, 0));
         }
-
+        //to-do: duvarlara çarpýnca duran script yazýlacak
         if (Input.GetMouseButton(0))
         {
             second = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, 0, 0));
             Vector3 diff = second - first;
-            transform.position += diff * speed;
+            _rb.velocity += diff * speed;
             first = second;
         }
     }
