@@ -7,7 +7,7 @@ public class PickerController : MonoBehaviour
     private Rigidbody _rb;
     private Mover _mover;
     private Vector3 _directionX;
-    private float _mouseX;
+    private float _mouseXPos;
     private bool _isClicked;
     void Awake()
     {
@@ -16,8 +16,8 @@ public class PickerController : MonoBehaviour
     }
     void Update()
     {
-        _mouseX = Input.GetAxis("Mouse X");
-        _directionX = new Vector3(_mouseX, 0, 0);
+        _mouseXPos = Input.GetAxis("Mouse X");
+        _directionX = new Vector3(_mouseXPos, 0, 0);
         CheckMouseClick();
     }
     void FixedUpdate()
@@ -25,7 +25,7 @@ public class PickerController : MonoBehaviour
         _mover.MoveForward();
         if (_isClicked)
         {
-            if (_mouseX != 0)
+            if (_mouseXPos != 0)
             {
                 _mover.MoveHorizontal(_rb ,_directionX);
             }
@@ -33,7 +33,6 @@ public class PickerController : MonoBehaviour
             {
                 _mover.StopHorizontal(_rb);
             }
-            
         }
         else
         {
