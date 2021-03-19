@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524751b031e55b44db348adfd9093a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
 --- !u!114 &4030540815583180491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0dbf7c45b231e48823a6f557ad19d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speedZ: 6
+  speedX: 150
 --- !u!1001 &6112454294511456128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,37 +207,37 @@ PrefabInstance:
     - target: {fileID: 8339796005290987314, guid: c9a8d45deb2271545b7d79deb6800be4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.32
+      value: 16.68
       objectReference: {fileID: 0}
     - target: {fileID: 8339796005290987314, guid: c9a8d45deb2271545b7d79deb6800be4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -39.69
+      value: -38.31
       objectReference: {fileID: 0}
     - target: {fileID: 8339796005290987314, guid: c9a8d45deb2271545b7d79deb6800be4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.97917205
+      value: 0.953717
       objectReference: {fileID: 0}
     - target: {fileID: 8339796005290987314, guid: c9a8d45deb2271545b7d79deb6800be4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20303227
+      value: 0.30070576
       objectReference: {fileID: 0}
     - target: {fileID: 8339796005290987314, guid: c9a8d45deb2271545b7d79deb6800be4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8339796005290987314, guid: c9a8d45deb2271545b7d79deb6800be4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8339796005290987314, guid: c9a8d45deb2271545b7d79deb6800be4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 23.429
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8339796005290987314, guid: c9a8d45deb2271545b7d79deb6800be4,
         type: 3}

@@ -4,30 +4,48 @@ using UnityEngine;
 
 public class PickerController : MonoBehaviour
 {
-    Rigidbody _rb;
-    Mover _mover;
-
-    Vector3 first, second;
-    public float speed = 2;
+    private Rigidbody _rb;
+    private Mover _mover;
+    private Vector3 _directionX;
+    private float _mouseX;
+    private bool _isClicked;
     void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _mover = GetComponent<Mover>();
     }
+    void Update()
+    {
+        _mouseX = Input.GetAxis("Mouse X");
+        _directionX = new Vector3(_mouseX, 0, 0);
+        CheckMouseClick();
+    }
     void FixedUpdate()
     {
-        _mover.Move();
-        if (Input.GetMouseButtonDown(0))
+        _mover.MoveForward();
+        if (_isClicked)
         {
-            first = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, 0, 0));
+            if (_mouseX != 0)
+            {
+                _mover.MoveHorizontal(_rb ,_directionX);
+            }
+            else
+            {
+                _mover.StopHorizontal(_rb);
+            }
+            
         }
-        //to-do: duvarlara çarpýnca duran script yazýlacak
+        else
+        {
+            _mover.StopHorizontal(_rb);
+        }        
+    }
+    private void CheckMouseClick()
+    {
         if (Input.GetMouseButton(0))
-        {
-            second = Camera.main.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, 0, 0));
-            Vector3 diff = second - first;
-            _rb.velocity += diff * speed;
-            first = second;
-        }
+            _isClicked = true;
+        else
+            _isClicked = false;
     }
 }
+
