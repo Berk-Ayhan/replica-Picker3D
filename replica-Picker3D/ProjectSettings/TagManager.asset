@@ -12,6 +12,8 @@ TagManager:
   - FinishLine
   - Picker
   - Wall
+  - PlatformEndPoint
+  - CollectableObject
   layers:
   - Default
   - TransparentFX

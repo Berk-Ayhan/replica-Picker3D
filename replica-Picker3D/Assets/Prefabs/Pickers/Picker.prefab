@@ -93,7 +93,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8376437588128204712, guid: 7c2928705f6607841ae526e4e9d1a5c7, type: 3}
 --- !u!1 &5832292054442685861
@@ -106,7 +106,6 @@ GameObject:
   m_Component:
   - component: {fileID: 298336489574620657}
   - component: {fileID: 4014741788247424940}
-  - component: {fileID: 3667115043129927755}
   - component: {fileID: 4342256117430945312}
   - component: {fileID: 4030540815583180491}
   m_Layer: 0
@@ -147,19 +146,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 1
---- !u!65 &3667115043129927755
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832292054442685861}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.54, y: 0.55, z: 2.55}
-  m_Center: {x: 0, y: 0, z: 0.83}
 --- !u!114 &4342256117430945312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,5 +170,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0dbf7c45b231e48823a6f557ad19d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedZ: 6
   speedX: 150
+  speedZ: 6
