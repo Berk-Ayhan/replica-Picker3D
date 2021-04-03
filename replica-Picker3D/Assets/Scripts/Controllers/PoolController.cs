@@ -37,7 +37,7 @@ public class PoolController : MonoBehaviour
         {
             _timeRemaining = 1f;
             _collectedObjects++;
-            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+            //other.gameObject.GetComponent<BoxCollider>().enabled = false;
             SetCollectedObjectsText();
         }
     }
